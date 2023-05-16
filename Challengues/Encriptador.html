@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+
+<html lang "es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width">
+        <title>Encriptador de texto</title>
+        <link rel="stylesheet" href="reset_Style.css">
+        <link rel="stylesheet" href="Style.CSS">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Zilla+Slab:wght@300&display=swap" rel="stylesheet">
+    </head>
+    <header>
+      <h1 class="titulo-page">/Encriptador de texto/</h1>
+    </header>
+    <main>
+      <section>
+        <textarea class="area-texto" cols="50" rows="7"placeholder="Ingrese su texto aquí..."></textarea>
+        <div>
+          <h6 class="Aviso">Sólo letras mayúsculas y sin acentos</h6>
+        </div>
+        <div class="botones">
+          <button class="encriptar" onclick="ButtEncriptar()" >Encriptar</button>
+          <button class="desencriptar"onclick="ButtDesencrip()">Desencriptar</button>
+        </div>
+      </section>
+     
+      <div>
+        <button class="copiar" >Copiar</button>
+       </div>
+       <section>
+        <textarea class="mensaje" cols="30" rows="15"placeholder="Aún o hemos encontrado ningún texto..."></textarea>
+    </section>
+
+    
+    </main>
+
+    <body> 
+
+    </body>
+    <footer>
+        <p class="copyright">&copy Copyright Laura Cañon-2023</p>
+    </footer>
+    <script src="script.js"></script>
+</html>
