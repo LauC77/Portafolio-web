@@ -589,7 +589,7 @@ nav a:hover {
     color: #42190B;
     text-decoration: underline;
     font-size: 1.3rem;
-   filter:drop-shadow(: 10px 10px 10px var(--color-verde-oscuro));
+   filter:drop-shadow(10px 10px 10px var(--color-verde-oscuro));
     transition: .75s;
 }
 
