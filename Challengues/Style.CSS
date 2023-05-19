@@ -1,0 +1,137 @@
+
+*{
+    font-family: 'Zilla Slab', serif;
+    font-weight: 400;
+    font-size: 19px;
+    line-height: 150%;
+   background-color:cornsilk;
+}
+
+
+
+.titulo-page{
+    padding-top: 5px;
+    margin-left: 10px;
+    width: 30%;
+    position: absolute;
+    left: 80px;
+    font-size: 40px;
+    font-weight: bold;
+    color:white;
+    background-color: black;
+
+}
+main{
+    display:flex;
+    margin-bottom:20px;
+    margin-left: 80px;
+}
+.area-texto{
+    display: flex;
+    border: none;
+    border-radius: 10px;
+    color:white;
+    margin-top: 110px;
+    text-transform: lowercase;
+    font-size: 24px;
+    background-color:black;
+
+ 
+}
+::placeholder{
+    color:white;
+    position: absolute;
+    left: 20px;
+}
+.area-texto:focus{
+    outline: none;
+}
+
+.botones{
+    display: flex;
+    margin-top: 18px;
+}
+.encriptar{
+        
+    background: black;
+    border-radius:24px;
+    color:white;
+    cursor: pointer;
+    width: 300px;
+    height: 67px;
+
+}
+.encriptar:hover{
+    border-color:black;
+    background-color: white;
+    color: black;
+}
+.mensaje{
+    display: flex;
+    background-color: white;
+    background-image: url("./imagenes/mensajefondo.PNG");
+    background-position: center;
+    background-size: 70%;
+    background-repeat: no-repeat;
+    border-color: black;
+    border-radius: 10px;
+    color:blue;
+    margin-left: 90px;
+    margin-top: 40px;
+    padding-left: 20px;
+    position:fixed;
+    width: 30%;
+    display: block;
+
+}
+.mensaje::placeholder{
+    color:black;
+    position: absolute;
+    top: 20px;
+    left:40px;
+    text-align: center;
+
+}
+.copiar{
+    display: flex;
+    background:black;
+    border-radius:24px;
+    color:white;
+    cursor: pointer;
+    width: 300px;
+    height: 67px;
+    
+}
+.copiar:hover{
+    border-color:black;
+    background-color: white;
+    color: black;
+}
+.desencriptar{
+    background: #f3f5fc;
+    border:1px solid #0A3871;
+    border-radius:24px;
+    color:black;
+    cursor: pointer;
+    width: 300px;
+    height: 67px;
+    margin-left: 30px ;
+}
+.desencriptar:hover{
+    border-color:black;
+    background-color:#0A3871;
+    color:black;
+}
+.Aviso{
+    color: white;
+    font-size: 20px;
+    background-color: black;
+}
+
+
+.copyright{
+    margin-top: 0px;
+    margin-left:80px;
+    color:dimgrey;
+    font-weight: bold;
+}
