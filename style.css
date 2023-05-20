@@ -63,9 +63,7 @@ body {
     flex-direction: column;
     margin: 0 0 0 15px;
 }
-.nav__footer{
 
-}
 
 nav a {
     text-transform: uppercase;
@@ -83,7 +81,6 @@ nav a:hover {
 
 .menu__list-footer{
     position:static;
-    margin: 1rem;
     height: 20%;
     text-align: center;
     display: flex;
@@ -778,6 +775,16 @@ min-height: 0;
     font-size: 2rem;
     padding: 1rem 2rem;
 }
+.title__soy{
+    width: 80%;
+}
+.saludo__contenido{
+    width: 100%;
+}
+.title__explora{
+    width: 80%;
+    margin: auto;
+}
 .about__container{
     padding: 0;
 }
@@ -791,6 +798,8 @@ min-height: 0;
 }
 .contenido__sobre-text {
     text-align: center;
+    padding: 0px;
+    width: 100%;
 }
 }
 
