@@ -77,6 +77,7 @@ nav a:hover {
     color: #4FA4A8;
     text-decoration: underline;
     font-size: 1.1rem;
+    transition: 1s;
 }
 
 .menu__list-footer {
@@ -880,22 +881,5 @@ Utiliza las referencias de los breakpoints @media abajo */
         width: 15%;
     }
 
-    /*Menu*/
-
-    /*Titulo*/
-
-    /*Sección sobre mi*/
-
-    /*Skills*/
-
-    /*Hobbies*/
-
-    /*Formación Académica*/
-
-    /*Experiencia Profesional*/
-
-    /*Contacto*/
-
-    /*Footer*/
 
 }
