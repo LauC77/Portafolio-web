@@ -1,15 +1,15 @@
 :root {
 
-    --color-fondo: #FAE4D2;
+    --color-fondo: #F2ECE9;
     --color-link: #000;
-    --color-rosa-nav: #DEBBBA;
-    --color-rosa-saludo: #F5DDD9;
-    --color-café-claro: #DEC5BA;
+    --color-rosa-nav: #F4E0E8;
+    --color-rosa-saludo: #F5F0F1;
+    --color-café-claro: #ECDBDF;
     --color-rosa: #FAD2E6;
     --color-café-blanco: #FAE9E1;
     --color-verde: #D4E0C3;
     --color-gris: #C2BAB8;
-    --color-verde-oscuro: #284743;
+    --color-verde-oscuro: #E9F2EC;
     --color-rosa-zanahoria: #DB9393;
     --color-blanco-rosa: #f2f2f2;
 
@@ -341,12 +341,12 @@ nav a:hover {
 }
 
 .color__angulo3 {
-    background-color: var(--color-verde);
+    background-color: var(--color-verde-oscuro);
 }
 
 .hobbies {
     padding: 2rem;
-    background-color: var(--color-verde);
+    background-color: var(--color-verde-oscuro);
 }
 
 .hobbies__title {
@@ -401,7 +401,7 @@ nav a:hover {
     height: 30px;
     position: relative;
     clip-path: polygon(0 0, 100% 0, 100% 40%, 100% 100%);
-    background-color: var(--color-verde);
+    background-color: var(--color-verde-oscuro);
     z-index: 1;
 }
 
