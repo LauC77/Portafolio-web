@@ -306,11 +306,12 @@ nav a:hover {
 .skills__line {
     display: flex;
     justify-content: space-evenly;
-
+    flex-wrap: wrap;
 }
 
 .skills__box {
-    flex-wrap: nowrap;
+    width: 14rem;
+    padding: 2rem;
 }
 
 .skills__box li {
