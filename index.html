@@ -31,6 +31,11 @@
                         <li class="menu__list__item"><a href="#contacto">Contacto</a></li>
                     </ul>
                 </nav>
+               <!-- Contenedor para el botón y el texto -->
+                <div class="modo-contenedor">
+                    <button id="modo-btn">🌙</button>
+                    <span id="modo-texto">Modo Noche</span> <!-- Texto que se actualizará -->
+                </div>
             </header>
         </section>
 
@@ -53,14 +58,14 @@
                     <div class="redes">
                         <ul class="title__network">
                             <!-- Pon los enlaces de tus redes sociales favoritas -->
-                            <li class="title__network__item"><a href="https://github.com/LauC77">Github<a>
-                                        <img src="assets\arrow.png"> </a></li>
+                            <li class="title__network__item"><a href="https://github.com/LauC77"target="_blank" rel="noopener noreferrer">Github
+                                        <img src="assets\arrow.png" alt="Logo de flecha"> </a></li>
                             <li class="title__network__item"><a
-                                    href="https://www.linkedin.com/in/laura-valentina-ca%C3%B1on-castro/">Linkedin</a>
-                                <img src="assets\arrow.png"></a>
+                                    href="https://www.linkedin.com/in/laura-valentina-ca%C3%B1on-castro/" target="_blank" rel="noopener noreferrer">Linkedin</a>
+                                <img src="assets\arrow.png" alt="Logo de flecha"></a>
                             </li>
-                            <li class="title__network__item"><a href="https://www.canva.com/design/DAFj_jhi1ak/m3oECuJEDWcV6JHZ5RLIQQ/view?utm_content=DAFj_jhi1ak&utm_campaign=designshare&utm_medium=link&utm_source=publishsharelink">Currículo</a>
-                                <img src="assets\arrow.png"></a>
+                            <li class="title__network__item"><a href="https://www.canva.com/design/DAFj_jhi1ak/m3oECuJEDWcV6JHZ5RLIQQ/view?utm_content=DAFj_jhi1ak&utm_campaign=designshare&utm_medium=link&utm_source=publishsharelink"target="_blank" rel="noopener noreferrer">Currículo</a>
+                                <img src="assets\arrow.png" alt="Logo de flecha"></a>
                             </li>
                         </ul>
                     </div>
@@ -76,25 +81,16 @@
                 <h3 class="about__title">Sobre</h3>
                 <h4 class="sobre__Laura">¿Quién es Laura?</h4>
                 <div class="contenido__sobre">
-                    <img class="profile" src="./imagenes/perfil.jpeg">
+                    <img class="profile" src="./imagenes/perfil.jpeg" alt ="Imagen de foto de perfil">
                     <div class="contenido__sobre-text">
-                        <p class="about__paragraph">Mi pasión por la tecnología me ha llevado a embarcarme en una nueva
-                            carrera como desarrolladora web.</p>
 
-                        <p class="about__paragraph">Soy una desarrolladora web front-end con experiencia en atención al
-                            cliente por redes sociales y una formación profesional en obras civiles y construcciones.
+                        <p class="about__paragraph">Desarrolladora web front-end en formación y estudiante de Ingeniería en Sistemas.
+                            Tengo experiencia en atención al cliente y una base profesional en obras civiles, lo que me ha brindado habilidades de comunicación, gestión y análisis.
+                            
                         </p>
 
-                        <p class="about__paragraph"> A través de mi experiencia en atención al cliente, he desarrollado
-                            habilidades de comunicación efectiva y resolución de problemas. Mi formación en obras
-                            civiles y construcciones me ha brindado una mentalidad analítica y habilidades de
-                            planificación y gestión de proyectos.
-
-                            Como desarrolladora web front-end, mi enfoque se centra en crear interfaces atractivas y
-                            funcionales que mejoren la experiencia del usuario. Estoy constantemente aprendiendo y
-                            manteniéndome actualizada con las últimas tecnologías en el campo del desarrollo web.
-
-                            Estoy emocionada por aplicar mis habilidades y conocimientos en proyectos desafiantes.</p>
+                        <p class="about__paragraph"> Me apasiona crear interfaces atractivas y funcionales, y estoy en constante aprendizaje para perfeccionar mis conocimientos en tecnologías web.
+                            Estoy lista para asumir nuevos desafíos y construir experiencias digitales excepcionales..</p>
 
                         <p class="about__paragraph">No dudes en contactarme para discutir cómo podemos colaborar y crear
                             experiencias web excepcionales juntos. Estoy lista para enfrentar nuevos desafíos y hacer
@@ -116,13 +112,6 @@
         <section class="skills">
             <h3 class="skills__title">Skills</h3>
             <div class="skills__line">
-                <div class="skills__box">
-                    <ul class="skills__cards">
-                        <li class="skills__img"><img src="./imagenes/icon-html.png" alt="Logo HTML"></li>
-
-                        <li class="skills__name"> HTML 5</li>
-                    </ul>
-                </div>
 
                 <div class="skills__box">
                     <ul class="skills__cards">
@@ -168,6 +157,13 @@
                 </div>
                 <div class="skills__box">
                     <ul class="skills__cards">
+                        <li class="skills__img"><img src="./imagenes/icon-java.png" alt="Logo JAVA"></li>
+
+                        <li class="skills__name"> JAVA</li>
+                    </ul>
+                </div>
+                <div class="skills__box">
+                    <ul class="skills__cards">
                         <li class="skills__img"><img src="./imagenes/api-icon.png" alt="Logo ApiRest"></li>
                         <li class="skills__name">Api Rest</li>
                     </ul>
@@ -180,11 +176,11 @@
                 </div>
                 <div class="skills__box">
                     <ul class="skills__cards">
-                        <li class="skills__img"><img src="./imagenes/MUI-icon.png" alt="Logo ApiRest"></li>
-                        <li class="skills__name">MUI</li>
+                        <li class="skills__img"><img src="./imagenes/icon-html.png" alt="Logo HTML"></li>
+
+                        <li class="skills__name"> HTML 5</li>
                     </ul>
                 </div>
-            </div>
 
         </section>
 
@@ -239,6 +235,17 @@
                 <ul class="institutions">
                     <li class="cards">
                         <div class="institution">
+                            <img src="./imagenes/logo_minuto_de_dios.png" alt="Uniminuto logo">
+                            <div class="details__academic">
+                                <h3>Ingeniera en Sistemas</h3>
+                                <p>Universidad Minuto de Dios</p>
+                                <p> En curso</p>
+
+                            </div>
+                        </div>
+                    </li>
+                    <li class="cards">
+                        <div class="institution">
                             <img src="assets\alura_logo.png" alt="Alura Latam">
                             <div class="details__academic">
 
@@ -246,22 +253,22 @@
                                 <p>Alura Latam</p>
                                 <p>Marzo 2023</p>
                                 <a class="certificar"
-                                    href="https://app.aluracursos.com/degree/certificate/f4137a7c-049c-4a95-b8cc-044ca492b3cc">Ver
+                                    href="https://app.aluracursos.com/degree/certificate/f4137a7c-049c-4a95-b8cc-044ca492b3cc" target="_blank" rel="noopener noreferrer">Ver
                                     certificado</a>
                             </div>
                         </div>
                     </li>
+                    
                     <li class="cards">
                         <div class="institution">
-                            <img src="./imagenes/Microsoft-Logo.jpg" alt="Microsoft logo">
+                            <img src="assets\alura_logo.png" alt="Alura Latam">
                             <div class="details__academic">
 
-                                <h3>Conceptos básicos de ciencia de datos</h3>
-                                <p>Microsoft</p>
-
-                                <p>Marzo 2023</p>
+                                <h3>MySQL</h3>
+                                <p>Alura Latam</p>
+                                <p>2023</p>
                                 <a class="certificar"
-                                    href="https://learn.microsoft.com/es-es/users/lauravalentinacaoncastro-3538/transcript/dlm6lan4rzmyrgq">Ver
+                                    href="https://app.aluracursos.com/certificate/3eddb164-d5f9-482f-8bd3-9364ab236d8b" target="_blank" rel="noopener noreferrer">Ver
                                     certificado</a>
                             </div>
                         </div>
@@ -278,20 +285,7 @@
                             </div>
                         </div>
                     </li>
-                    <li class="cards">
-                        <div class="institution">
-                            <img src="assets\alura_logo.png" alt="Alura Latam">
-                            <div class="details__academic">
 
-                                <h3>MySQL</h3>
-                                <p>Alura Latam</p>
-                                <p>2023</p>
-                                <a class="certificar"
-                                    href="https://app.aluracursos.com/certificate/3eddb164-d5f9-482f-8bd3-9364ab236d8b">Ver
-                                    certificado</a>
-                            </div>
-                        </div>
-                    </li>
                 </ul>
             </div>
         </section>
@@ -302,8 +296,8 @@
 
 
         <!-- Sección de Experiencia Profesional/Proyectos-->
-        <section class="experience"> cards
-            <h2 class="experience__section__title">Experiencia Profesional</h2>
+        <section class="experience">
+            <h2 class="experience__section__title">Proyectos</h2>
             <div class="experiencie__box">
                 <ul class="experience__box-info">
                     <li class="experience__lista">
@@ -446,7 +440,6 @@
             <div class="contacto__container">
                 <h2 class="contacto__title">Contacto</h2>
                 <div class="contact-info">
-                    <img src="imagenes/contacto-icon.jpg" alt="Imagen de contacto">
                     <div class="details__contac">
                         <h3>¿Quieres contactarme?</h3>
                         <p>Email: lauracanonc07@gmail.com</p>
@@ -458,7 +451,22 @@
                 </div>
             </div>
         </section>
-
+    <section class="formulario">
+        <h1>Formulario de Contacto</h1>
+        <!-- Formulario de contacto -->
+        <form id="contact-form">
+            <label for="name">Nombre:</label>
+            <input type="text" id="name" name="name" placeholder="Tu nombre" required>
+            
+            <label for="email">Correo electrónico:</label>
+            <input type="email" id="email" name="email" placeholder="Tu correo electrónico" required>
+            
+            <label for="message">Mensaje:</label>
+            <textarea id="message" name="message" placeholder="Escribe tu mensaje" required></textarea>
+            
+            <button type="submit">Enviar</button>
+        </form>
+    </section>
 
         <!-- Sección de Footer -->
         <section class="footer">
@@ -475,19 +483,31 @@
                 </nav>
                 <div class="fin__footer">
                     <img src="./imagenes/LC-logo-semiblanco.jpg" alt="logo Laura Cañon" class="footer__logo">
-                    <p>Derechos de autor &copy; 2023 - Laura Cañon</p>
+                    <p>Derechos de autor &copy; 2025- Laura Cañon</p>
                 </div>
 
             </div>
         </section>
-
-
     </div>
     </div>
-
 
     <!-- Script del documento JavaScript -->
-    <script src="validacion.js"></script>
+    <script src="js/validacion.js"></script>  
+   <!-- Script para EmailJS -->
+   <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+</script>
+<script type="text/javascript">
+   (function(){
+      emailjs.init({
+        publicKey: "7rhkZaWpZ8SsbectW",
+      });
+   })();
+</script>
+   <script src="js/contacto.js"></script>
+  
+    </script>
+    
     </div>
 </body>
 

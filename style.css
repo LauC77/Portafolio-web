@@ -14,7 +14,11 @@
     --color-blanco-rosa: #f2f2f2;
 
 }
-
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 ol,
 ul,
 li {
@@ -32,6 +36,7 @@ body {
     font-family: 'Raleway';
     margin: 0;
     line-height: 1;
+    transition: background-color 0.5s ease, color 0.5s ease;
 }
 
 .nav__header {
@@ -41,45 +46,78 @@ body {
 .menu__list {
     background-color: var(--color-rosa-nav);
     position: fixed;
-    margin: none;
     top: 0;
-    right: 0;
-    bottom: 0;
     left: 0;
+    right: 0;
     height: 80px;
-    text-align: center;
     display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
-    transition: 0.5s;
-    transition: 0.5s;
-    z-index: 2
+    gap: 2rem;
+    z-index: 1000;
+    transition: background-color 0.5s ease;
 }
-
+.menu__list__item, .about__container h3, .about__container h4 {
+    transition: color 0.5s ease;
+}
 .menu__list__item {
-    display: flex;
-    flex-direction: column;
-    margin: 0 0 0 15px;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 1rem;
 }
-
-
-nav a {
+.menu_list_item a{
     text-transform: uppercase;
     color: black;
     font-weight: bold;
     font-size: 20px;
     text-decoration: none;
 }
-
-nav a:hover {
-    color: #4FA4A8;
+.menu__list__item a:hover , .menu__list__item-footer a:hover {
     text-decoration: underline;
-    font-size: 1.1rem;
+    color: #4FA4A8;
     transition: 1s;
+    font-size: 1.1rem;
+}
+/* Botón modo oscuro */
+.modo-contenedor {
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Espacio entre el botón y el texto */
+}
+#modo-btn {
+    background: linear-gradient(45deg, #4FA4A8, #6BBF9F); /* Degradado atractivo */
+    border: none;
+    color: white;
+    padding: 0.8rem;
+    border-radius: 50%;
+    font-size: 2rem;
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease; /* Efectos de transición */
+    position: absolute;
+    top:7rem;
+    right: 3rem;
+}
+#modo-btn:hover {
+    transform: scale(1.1); /* Aumenta el tamaño del botón en hover */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); /* Añade sombra al hacer hover */
+}
+/* Estilo del texto */
+#modo-texto {
+    font-weight: bold;
+    color: #333; /* Color neutro para el texto */
+    transition: color 0.3s ease; /* Suaviza el cambio de color */
+}
+/* Estilo para texto en modo oscuro */
+body.modo-oscuro #modo-texto {
+    color: #FAD2E6; /* Color de texto bonito para el modo oscuro */
 }
 
+/* Para pantallas grandes, ocultar el texto */
+@media (min-width: 769px) {
+    #modo-texto {
+        display: none;
+    }
+}
 .menu__list-footer {
     position: static;
     height: 20%;
@@ -112,6 +150,13 @@ nav a:hover {
     justify-content: center;
     align-items: center;
 }
+/*saludo */
+.saludo {
+    background-color: var(--color-rosa-saludo);
+    padding-top: 7rem;
+    text-align: center;
+
+}
 
 .title__container {
     display: flex;
@@ -121,51 +166,14 @@ nav a:hover {
 }
 
 .title__bio {
-    padding: 1rem;
-    justify-content: center;
-    font-size: 4rem;
+    font-size: 3rem;
     font-weight: bold;
-    text-align: center;
-    animation-duration: 3s;
-    animation-name: saludo;
-
-}
-
-.saludo__div {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: var(--color-rosa-saludo);
-    padding: 2rem 0rem 0 0;
-    flex-grow: 1;
-    min-height: 34rem;
-
-}
-
-@keyframes saludo {
-    0% {
-        font-size: 4rem;
-    }
-
-    50% {
-        font-size: 6rem;
-    }
-
-    100% {
-        font-size: 4rem;
-    }
+    margin-bottom: 1rem;
 }
 
 .title__soy {
     font-weight: bold;
     font-size: 2rem;
-    text-align: center;
-}
-
-.title__explora {
-    font-weight: bold;
-    font-size: 1.5rem;
     text-align: center;
 }
 
@@ -180,63 +188,12 @@ nav a:hover {
     font-size: 1rem;
     line-height: 30px;
 }
-
-.angulo1 {
-    width: 100%;
-    height: 80px;
-    position: relative;
-    clip-path: polygon(0 0, 100% 0, 100% 40%, 0% 100%);
-    background-color: var(--color-rosa-saludo);
-    z-index: 1
+.title__explora {
+    font-weight: bold;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
 }
-
-.about__title {
-    text-transform: uppercase;
-    margin: 0 0 10px;
-    font-size: 0.75rem;
-    color: #3c191b;
-    letter-spacing: 0.06rem;
-}
-
-.sobre__Laura {
-    font-size: 1.9rem;
-    line-height: 1.3;
-    text-transform: capitalize;
-    margin: 0 0 1rem;
-    color: #30574c;
-}
-
-.contenido__sobre {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    justify-content: space-between;
-    align-items: flex-start;
-}
-
-.contenido__sobre-text {
-    width: 70%;
-    padding-left: 5%;
-}
-
-.profile {
-    margin-right: 40px;
-    width: 30%;
-    border-radius: 50%;
-}
-
-.profile:hover {
-    filter: drop-shadow(20px 20px 10px var(--color-gris));
-    scale: 1.1;
-    transition: 3s;
-}
-
-.about__paragraph {
-    padding: 1rem;
-    line-height: 1.5rem;
-    text-align: justify;
-}
-
+/*Redes links*/
 .redes {
     display: flex;
     flex-direction: column;
@@ -258,7 +215,15 @@ nav a:hover {
 .title__network__item {
     padding: 8px;
 }
-
+.angulo1 {
+    width: 100%;
+    height: 80px;
+    position: relative;
+    clip-path: polygon(0 0, 100% 0, 100% 40%, 0% 100%);
+    background-color: var(--color-rosa-saludo);
+    z-index: 1
+}
+/*About section*/
 .about__container {
     background-color: var(--color-fondo);
     display: flex;
@@ -269,6 +234,52 @@ nav a:hover {
     margin: 1rem auto 1rem;
     background-repeat: no-repeat;
     border-radius: 5px;
+}
+
+.about__title {
+    text-transform: uppercase;
+    margin: 0 0 10px;
+    font-size: 0.75rem;
+    color: #3c191b;
+    letter-spacing: 0.06rem;
+}
+
+.sobre__Laura {
+    font-size: 1.9rem;
+    line-height: 1.3;
+    text-transform: capitalize;
+    margin: 0 0 1rem;
+    color: #30574c;
+}
+.about__paragraph {
+    padding: 1rem;
+    line-height: 1.5rem;
+    text-align: justify;
+}
+
+.contenido__sobre {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.contenido__sobre-text {
+    width: 70%;
+    padding-left: 5%;
+}
+
+.profile {
+    margin-right: 40px;
+    width: 35%;
+    border-radius: 100%;
+}
+
+.profile:hover {
+    filter: drop-shadow(20px 20px 10px var(--color-gris));
+    scale: 1.1;
+    transition: 3s;
 }
 
 .angulo2 {
@@ -287,7 +298,7 @@ nav a:hover {
     background-color: var(--color-café-claro);
 }
 
-.skills__title {
+.skills__title, .hobbies__title {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -325,7 +336,7 @@ nav a:hover {
     width: 5rem;
 }
 
-.skills__cards:hover {
+.skills__cards:hover , .hobbies__cards:hover {
     border-color: var(--color-verde);
     transform: scale(1.1);
     filter: drop-shadow(20px 20px 10px var(--color-gris));
@@ -344,22 +355,10 @@ nav a:hover {
 .color__angulo3 {
     background-color: var(--color-verde-oscuro);
 }
-
+/*Hobbies*/
 .hobbies {
     padding: 2rem;
     background-color: var(--color-verde-oscuro);
-}
-
-.hobbies__title {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 1.9rem;
-    line-height: 1.3;
-    text-transform: capitalize;
-    margin: 0 0 1rem;
-    color: #30574c;
-    margin-top: 1rem;
 }
 
 .hobbies__cards {
@@ -375,13 +374,6 @@ nav a:hover {
 
 .imagen__hobb {
     width: 5rem;
-}
-
-.hobbies__cards:hover {
-    border-color: var(--color-verde);
-    transform: scale(1.1);
-    filter: drop-shadow(20px 20px 10px var(--color-gris));
-    transition: 2s;
 }
 
 .hobbies__line {
@@ -410,7 +402,7 @@ nav a:hover {
 .color__angulo4 {
     background-color: white;
 }
-
+/*Formación académica*/
 .formacion-academica {
     background-color: white;
     padding: 5%;
@@ -423,14 +415,14 @@ nav a:hover {
     line-height: 1.3;
     text-transform: capitalize;
     color: #30574c;
-    margin: none;
+    margin-bottom: 3rem;
 }
 
 .institutions {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-evenly;
-    padding: 2%;
+    justify-content: center;
+    gap: 2rem;
 
 }
 
@@ -452,7 +444,6 @@ nav a:hover {
     align-items: flex-end;
     width: 20%;
     padding: 1rem;
-
     border-style: solid;
     border-radius: 10px;
     border-color: var(--color-café-claro);
@@ -509,7 +500,7 @@ nav a:hover {
     background-color: white;
     z-index: 1;
 }
-
+/* Experiencia */
 .experience__box {
     width: 45%;
     transition: transform 0.3s ease;
@@ -570,6 +561,7 @@ nav a:hover {
 
 .descripcion {
     padding: 1rem;
+    line-height: 1.8;
 }
 
 .experiencia__botao--repo,
@@ -659,11 +651,6 @@ nav a:hover {
     margin-top: 20px;
 }
 
-.contact-info img {
-    width: 150px;
-    height: auto;
-    margin-right: 20px;
-}
 
 .details__contac {
     text-align: left;
@@ -672,7 +659,99 @@ nav a:hover {
 .details__contac p {
     margin: 10px 0;
 }
-
+/* Estilos generales para el formulario */
+#contact-form {
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    font-family: 'Arial', sans-serif;
+    color: #333;
+  }
+  
+  /* Título del formulario */
+  .formulario h1 {
+    text-align: center;
+    color: #3498db;
+    font-size: 30px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+  
+  /* Estilo de las etiquetas */
+  #contact-form label {
+    display: block;
+    font-size: 16px;
+    margin-bottom: 8px;
+    color: #555;
+  }
+  
+  /* Estilo para los campos de texto */
+  #contact-form input,
+  #contact-form textarea {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    color: #333;
+    box-sizing: border-box; /* Asegura que el padding no afecte el tamaño del campo */
+  }
+  
+  /* Estilo cuando el campo está enfocado */
+  #contact-form input:focus,
+  #contact-form textarea:focus {
+    border-color: #3498db;
+    outline: none;
+    box-shadow: 0 0 8px rgba(52, 152, 219, 0.3);
+  }
+  
+  /* Estilo para el botón de envío */
+  #contact-form button {
+    background-color: #3498db;
+    color: white;
+    font-size: 18px;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+    transition: background-color 0.3s ease;
+  }
+  
+  /* Efecto cuando el botón se encuentra sobre el cursor (hover) */
+  #contact-form button:hover {
+    background-color: #2980b9;
+  }
+  
+  /* Mensajes de éxito o error */
+  #contact-form .message {
+    text-align: center;
+    font-size: 16px;
+    padding: 10px;
+    border-radius: 5px;
+    margin-top: 20px;
+  }
+  
+  #contact-form .message.success {
+    background-color: #2ecc71;
+    color: white;
+  }
+  
+  #contact-form .message.error {
+    background-color: #e74c3c;
+    color: white;
+  }
+  
+  /* Estilos para los campos de texto largos */
+  #contact-form textarea {
+    resize: vertical;
+    min-height: 150px;
+  }
+  
 .redes_cont:hover {
     color: #42190B;
     text-decoration: underline;
@@ -692,18 +771,85 @@ nav a:hover {
 }
 
 
+/* Modo Oscuro */
+body.modo-oscuro, body.modo-oscuro .angulo1, body.modo-oscuro .angulo2,body.modo-oscuro .angulo4, body.modo-oscuro.angulo5,body.modo-oscuro .angulo6 {
+    background-color: #121212;
+    color: #f2f2f2;
+}
 
+body.modo-oscuro a {
+    color: #f2f2f2;
+}
 
-/* Vamos a desafiarnos trabajando con responsividad?
-Utiliza las referencias de los breakpoints @media abajo */
-
+body.modo-oscuro .menu__list {
+    background-color: #333;
+}
+body.modo-oscuro .title__bio {
+    color:#FAD2E6;
+}
+body.modo-oscuro .saludo,
+body.modo-oscuro .experience,
+body.modo-oscuro .contacto,
+body.modo-oscuro .footer {
+    background-color: #1a1a1a;
+}
+body.modo-oscuro .about__container h3{
+    color: #D4E0C3;
+}
+body.modo-oscuro .about__container h4{
+    color:#DB9393;
+}
+body.modo-oscuro .about, body.modo-oscuro .about__container{
+    background-color: #121212;
+}
+body.modo-oscuro .color__angulo2, body.modo-oscuro .angle3{
+background-color: #1c1f26;
+}
+body.modo-oscuro .skills__title {
+    color: bisque;
+}
+body.modo-oscuro .skills{
+    background-color: #1c1f26;
+}
+body.modo-oscuro .color__angulo3, body.modo-oscuro .hobbies, body.modo-oscuro .angulo4{
+    background-color: #2a2a2a;
+    }
+body.modo-oscuro .hobbies__title {
+        color:#4FA4A8;
+    }
+body.modo-oscuro .color__angulo4,body.modo-oscuro .angulo5 , body.modo-oscuro .formacion-academica h2,body.modo-oscuro .formacion-academica {
+    background-color: #1d2d2f;
+        }
+body.modo-oscuro .formacion-academica h2, body.modo-oscuro.formacion-academica .cards {
+            color:aliceblue;
+        }
+body.modo-oscuro .formacion-academica .cards{
+    background-color: aliceblue;
+}
+body.modo-oscuro .experience {
+    background-color: #121212;
+}
+body.modo-oscuro .experience__section__title {
+    color: #FAD2E6;
+}
+body.modo-oscuro .experience__lista {
+    background-color: #2b0f34;
+}
+/* Responsividad*/
 
 /*Tablet*/
 @media screen and (max-width:920px) {
     .menu {
         width: 100%;
     }
-
+    .saludo{
+        padding-top: 3rem;
+    }
+    #modo-btn{
+        top: 11rem;
+        right: auto;
+        left: 2rem;
+    }
     .menu__list {
         flex-wrap: wrap;
         position: relative;
@@ -715,7 +861,6 @@ Utiliza las referencias de los breakpoints @media abajo */
         padding: .75rem 1rem .75rem 1rem;
         border-bottom: 1px solid black;
     }
-
 
     .institutions {
         display: flex;
@@ -768,41 +913,29 @@ Utiliza las referencias de los breakpoints @media abajo */
         min-height: 0;
     }
 
-    @keyframes saludo {
-        0% {
-            font-size: 2rem;
-        }
-
-        50% {
-            font-size: 4rem;
-        }
-
-        100% {
-            font-size: 2rem;
-        }
-    }
-
-}
-
-
 @media screen and (max-width: 768px) {
+    body.modo-oscuro .modo-contenedor{
+        background-color: #1a1a1a;
+    } 
+    #modo-btn {
+        position: inherit;
+        margin: 1rem 1rem 1rem 5rem;
+    }
+    .modo-contenedor {
+        font-size: 1.2rem;
+        background-color:var(--color-rosa-saludo) ;
+    }
+    .saludo{
+        padding: 0;
+    }
+    #modo-texto {
+        font-size: 1rem; /* Tamaño adecuado en pantallas pequeñas */
+        display: inline; /* Asegura que el texto se muestre */
+    }
+   
     .title__bio {
         font-size: 3rem;
         padding: 1rem 2rem;
-    }
-
-    @keyframes saludo {
-        0% {
-            font-size: 3rem;
-        }
-
-        50% {
-            font-size: 4rem;
-        }
-
-        100% {
-            font-size: 3rem;
-        }
     }
 
     .title__subsection {
