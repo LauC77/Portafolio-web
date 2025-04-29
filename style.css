@@ -38,7 +38,74 @@ body {
     line-height: 1;
     transition: background-color 0.5s ease, color 0.5s ease;
 }
+.language-mobile-container {
+    display: none;
+    padding: 1rem;
+    text-align: center;
+  }
+  
+  #language-select-mobile {
+    width: 6rem;
+    padding: 6px 12px;
+    font-size: 0.9rem;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    background-color: #fff;
+    appearance: none;
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg fill='%23666' height='24' viewBox='0 0 24 24' width='24' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M7 10l5 5 5-5z'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 10px center;
+    background-size: 16px 16px;
+    color: #333;
+    cursor: pointer;
+  }
+  
+  @media (max-width: 920px) {
+    .language-mobile-container {
+      display: block;
+    }
+  }
+  
+#language-select {
+    width: 6rem;
+    color: #333;
+    font-family: inherit;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    appearance: none;
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg fill='%23666' height='24' viewBox='0 0 24 24' width='24' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M7 10l5 5 5-5z'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 10px center;
+    background-size: 16px 16px;
+    padding-right: 36px;
+    position: absolute;
+    top: 20px;
+    left: 40px; /* ✅ Ahora está a la izquierda */
+    z-index: 2000;
+    padding: 6px 12px;
+    border-radius: 6px;
+    font-size: 0.9rem;
+    border: 1px solid #ccc;
+    background-color: #fff;
+  }
+  
+  
+  #language-select:hover {
+    background-color: #eee;
+    border-color: #888;
+  }
+  
+  #language-select:focus {
+    outline: none;
+    border-color: #007bff;
+    box-shadow: 0 0 0 2px rgba(0,123,255,0.25);
+  }
+  .menu__list {
+    position: relative; /* necesario para posicionar elementos hijos absolutamente */
+  }
+  
 
+  
 .nav__header {
     width: 100% - 40px;
 }
@@ -78,6 +145,14 @@ body {
     transition: 1s;
     font-size: 1.1rem;
 }
+.menu__list select {
+    padding: 6px 12px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    background-color: #fff;
+    font-size: 0.9rem;
+  }
+  
 /* Botón modo oscuro */
 .modo-contenedor {
     display: flex;
@@ -826,6 +901,9 @@ body.modo-oscuro .formacion-academica h2, body.modo-oscuro.formacion-academica .
 body.modo-oscuro .formacion-academica .cards{
     background-color: aliceblue;
 }
+body.modo-oscuro .formacion-academica .certificar{
+    color: #000;;
+}
 body.modo-oscuro .experience {
     background-color: #121212;
 }
@@ -839,6 +917,9 @@ body.modo-oscuro .experience__lista {
 
 /*Tablet*/
 @media screen and (max-width:920px) {
+    #language-select {
+        display: none;
+      }  
     .menu {
         width: 100%;
     }
@@ -846,7 +927,7 @@ body.modo-oscuro .experience__lista {
         padding-top: 3rem;
     }
     #modo-btn{
-        top: 11rem;
+        top: 15rem;
         right: auto;
         left: 2rem;
     }

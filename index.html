@@ -17,12 +17,26 @@
 </head>
 
 <body>
+    <!-- Este se muestra solo en móviles -->
+    <div class="language-mobile-container">
+    <select id="language-select-mobile">
+        <option value="es">Español</option>
+        <option value="en">English</option>
+    </select>
+    </div>
     <!-- Sección del Menú  -->
     <div class="tudo">
         <section class="menu">
             <header class="menu__header">
                 <nav class="nav__header">
                     <ul class="menu__list">
+                        <li>
+                                 <!-- Selector de idioma -->
+                        <select id="language-select">
+                            <option value="es">Español</option>
+                            <option value="en">English</option>
+                        </select>
+                        </li>
                         <li class="menu__list__item"><a href="#sobre-mi">Sobre mi</a></li>
                         <li class="menu__list__item"><a href="#skills">Skills</a></li>
                         <li class="menu__list__item"><a href="#hobbies">Hobbies</a></li>
@@ -90,7 +104,7 @@
                         </p>
 
                         <p class="about__paragraph"> Me apasiona crear interfaces atractivas y funcionales, y estoy en constante aprendizaje para perfeccionar mis conocimientos en tecnologías web.
-                            Estoy lista para asumir nuevos desafíos y construir experiencias digitales excepcionales..</p>
+                            Estoy lista para asumir nuevos desafíos y construir experiencias digitales excepcionales.</p>
 
                         <p class="about__paragraph">No dudes en contactarme para discutir cómo podemos colaborar y crear
                             experiencias web excepcionales juntos. Estoy lista para enfrentar nuevos desafíos y hacer
@@ -300,8 +314,8 @@
             <h2 class="experience__section__title">Proyectos</h2>
             <div class="experiencie__box">
                 <ul class="experience__box-info">
-                    <li class="experience__lista">
-                        <h2>Página web Summercé Restaurante </h2>
+                    <li class="experience__lista" data-project="summerce">
+                        <h2 class="experience__project-title">Página web Summercé Restaurante </h2>
                         <img class="experience__img" src="./imagenes/summerce.png">
                         <p class="descripcion"> Es una página web para un restaurante de la ciudad de Moniquirá Boyacá, cuenta con varias secciones que muestran al cliente la escencia del restaurante y le facilitan hacer sus pedidos, reservas, comunicación, etc.                        </p>
                         <div class="experience__description">
@@ -316,8 +330,8 @@
                         </div>
 
                     </li>
-                    <li class="experience__lista">
-                        <h2>Formulario de colaboradores </h2>
+                    <li class="experience__lista" data-project="org">
+                        <h2 class="experience__project-title">Formulario de colaboradores </h2>
                         <img class="experience__img" src="./imagenes/org.png">
                         <p class="descripcion"> Es una plataforma colaborativa diseñada para facilitar la gestión de
                             colaboradores y equipos en proyectos.
@@ -334,7 +348,7 @@
                         </div>
 
                     </li>
-                    <li class="experience__lista">
+                    <li class="experience__lista" data-project="alurafood">
                         <h2 class="experience__project-title">AluraFood - Formulario de Servicio de Comida a Domicilio</h2>
                         <img class="experience__img" src="./imagenes/alurafood.png">
                         <p class="descripcion">Es un proyecto de formulario diseñado para un servicio de comida a domicilio. El objetivo principal de este proyecto es permitir a los usuarios realizar pedidos de comida en línea de manera rápida y conveniente.
@@ -348,8 +362,8 @@
                                         demo</button></a></span>
                         </div>
                     </li>
-                    <li class="experience__lista">
-                        <h2>Barberia Alura </h2>
+                    <li class="experience__lista" data-project="barberia">
+                        <h2 class="experience__project-title">Barberia Alura </h2>
                         <img class="experience__img" src="./imagenes/Bareberia-Alura.png" alt="Barberia Alura página">
                         <p class="descripcion">Es la página web de ejemplo para una barberia local, allí se destacan los servicios y permite a los visitantes contactar y obtener más información sobre los servicios ofrecidos.
                         </p>
@@ -363,8 +377,8 @@
                         </div>
 
                     </li>
-                    <li class="experience__lista">
-                        <h2>Formulario de registro para Usuarios-Petshop </h2>
+                    <li class="experience__lista" data-project="petshop">
+                        <h2 class="experience__project-title">Formulario de registro para Usuarios-Petshop </h2>
                         <img class="experience__img" src="./imagenes/petshop.png">
                         <p class="descripcion">
                         Es un prototipo de formulario de registro interactivo y fácil de usar para los usuarios que deseen registrarse en una tienda de artículos para mascotas. 
@@ -379,8 +393,8 @@
                         </div>
 
                     </li>
-                    <li class="experience__lista">
-                        <h2>Quiz Dev App</h2>
+                    <li class="experience__lista" data-project="quizdev">
+                        <h2 class="experience__project-title">Quiz Dev App</h2>
                         <img class="experience__img" src="./imagenes/quiz dev app.png">
                         <p class="descripcion">
                             Consiste en el desarrollo de una aplicación web interactiva,que ofrece a los usuarios un quiz con preguntas básicas de programación, lo que permite a los principiantes en programación puedan poner a prueba sus conocimientos y aprender de una manera interactiva.
@@ -394,8 +408,8 @@
                                         demo</button></a></span>
                         </div>
                     </li>
-                    <li class="experience__lista">
-                        <h2>Movies Lav</h2>
+                    <li class="experience__lista" data-project="movies">
+                        <h2 class="experience__project-title">Movies Lav</h2>
                         <img class="experience__img" src="./imagenes/movies lav.png">
                         <p class="descripcion">
                             Consiste en el desarrollo de un sitio web, dónde se pueden encontrar gran variedad de peliculas, se puede hacer la búsqueda de alguna en especial, cada una tiene su titulo, su potada, la calificación y al ir encima de alguna, se observara una breve descripción, en el inicio se encuentran los últimos estrenos.
@@ -411,8 +425,8 @@
                     </li>
                    
                    
-                    <li class="experience__lista">
-                        <h2>Nocturnos Gaming </h2>
+                    <li class="experience__lista" data-project="nocturnos">
+                        <h2 class="experience__project-title">Nocturnos Gaming </h2>
                         <img class="experience__img" src="./imagenes/mocturnos gamming.png">
                         <p class="descripcion">
                             Es un proyecto que destaca el canal de YouTube "Nocturnos Gaming". Este proyecto muestra los cuatro últimos videos publicados por el canal, brindando a los visitantes un vistazo rápido y conveniente a su contenido más reciente.  
@@ -441,30 +455,29 @@
                 <h2 class="contacto__title">Contacto</h2>
                 <div class="contact-info">
                     <div class="details__contac">
-                        <h3>¿Quieres contactarme?</h3>
-                        <p>Email: lauracanonc07@gmail.com</p>
-                        <p>En internet: <a class="redes_cont"
-                                href="https://www.linkedin.com/in/laura-valentina-ca%C3%B1on-castro/">Linkedin </a>/<a
-                                class="redes_cont" href="https://github.com/LauC77">Github</a> </p>
-
+                        <h3 class="contacto_subtitulo">¿Quieres contactarme?</h3>
+                        <p> Email: lauracanonc07@gmail.com</p>
+                        <p id="contacto_internet">En internet: <a class="redes_cont"
+                            href="https://www.linkedin.com/in/laura-c-c/" target="_blank" rel="noopener noreferrer">Linkedin </a>/<a
+                            class="redes_cont" href="https://github.com/LauC77" target="_blank" rel="noopener noreferrer">Github</a></p>
                     </div>
                 </div>
             </div>
         </section>
     <section class="formulario">
-        <h1>Formulario de Contacto</h1>
+        <h1 class="formulario_titulo">Formulario de Contacto</h1>
         <!-- Formulario de contacto -->
         <form id="contact-form">
-            <label for="name">Nombre:</label>
+            <label for="name" class="label_nombre">Nombre:</label>
             <input type="text" id="name" name="name" placeholder="Tu nombre" required>
             
-            <label for="email">Correo electrónico:</label>
+            <label for="email" class="label_email">Correo electrónico:</label>
             <input type="email" id="email" name="email" placeholder="Tu correo electrónico" required>
             
-            <label for="message">Mensaje:</label>
+            <label for="message" class="label_mensaje">Mensaje:</label>
             <textarea id="message" name="message" placeholder="Escribe tu mensaje" required></textarea>
             
-            <button type="submit">Enviar</button>
+            <button type="submit" class="boton_enviar">Enviar</button>
         </form>
     </section>
 
@@ -483,16 +496,17 @@
                 </nav>
                 <div class="fin__footer">
                     <img src="./imagenes/LC-logo-semiblanco.jpg" alt="logo Laura Cañon" class="footer__logo">
-                    <p>Derechos de autor &copy; 2025- Laura Cañon</p>
+                    <p class="derechos">Hecho con amor desde &copy; 2022-2025 Laura Cañon</p>
                 </div>
 
             </div>
         </section>
     </div>
     </div>
-
+<!-- Script del documento de cambio de idioma -->
+<script src="idioma.js" defer></script>  
     <!-- Script del documento JavaScript -->
-    <script src="validacion.js" defer></script>  
+    <script src="Modo.js" defer></script>  
    <!-- Script para EmailJS -->
    <script type="text/javascript"
         src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js" >
